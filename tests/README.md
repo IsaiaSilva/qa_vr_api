@@ -57,3 +57,4 @@ Results API
 
 [contato]
 qa.eng.isaiasilva@gmail.com
+isaiasilva.info@gmail.com
