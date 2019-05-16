@@ -1,0 +1,163 @@
+[
+  {
+    "uri": "features/specs/consulta.feature",
+    "id": "query-data-from-an-address-from-the-provided-zipcode",
+    "keyword": "Feature",
+    "name": "Query data from an address from the provided zipcode",
+    "description": "    As part of the selection process for QA Tester's vacancy in VR,\n    I want to perform a query of data of an address by the provided CEP",
+    "line": 1,
+    "elements": [
+      {
+        "id": "query-data-from-an-address-from-the-provided-zipcode;search-for-an-address-and-return-the-ibge-code",
+        "keyword": "Scenario",
+        "name": "Search for an address and return the IBGE code",
+        "description": "",
+        "line": 6,
+        "type": "scenario",
+        "comments": [
+          {
+            "value": "#TC_001 - 2.1 - Criar um cenário de sucesso na consulta, printando o código do IBGE do endereço no stdout.",
+            "line": 5
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "client to provide an API for testing",
+            "line": 7,
+            "match": {
+              "location": "features/step_definitions/consulta.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 596846700
+            }
+          },
+          {
+            "keyword": "When ",
+            "name": "I make an valid CEP query \"01001-000\"",
+            "line": 8,
+            "match": {
+              "location": "features/step_definitions/consulta.rb:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 563308700
+            }
+          },
+          {
+            "keyword": "Then ",
+            "name": "the IBGE code must be displayed and correspond to the provided zip code",
+            "line": 9,
+            "output": [
+              "O CÓDIGO DO IBGE: 3550308, CORRESPONDE AO CEP: 01001-000!"
+            ],
+            "match": {
+              "location": "features/step_definitions/consulta.rb:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3810900
+            }
+          }
+        ],
+        "after": [
+          {
+            "match": {
+              "location": "features/support/hooks.rb:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4316372700
+            }
+          },
+          {
+            "match": {
+              "location": "features/support/env.rb:56"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 68546000
+            }
+          }
+        ]
+      },
+      {
+        "id": "query-data-from-an-address-from-the-provided-zipcode;search-for-an-address-with-an-invalid-zip-code",
+        "keyword": "Scenario",
+        "name": "Search for an address with an invalid zip code",
+        "description": "",
+        "line": 12,
+        "type": "scenario",
+        "comments": [
+          {
+            "value": "#TC_002 - 2.2 - Criar um cenário passando um CEP inválido",
+            "line": 11
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "client to provide an API for testing",
+            "line": 13,
+            "match": {
+              "location": "features/step_definitions/consulta.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 563418200
+            }
+          },
+          {
+            "keyword": "When ",
+            "name": "I make an invalid CEP query \"05001-XYZ\"",
+            "line": 14,
+            "match": {
+              "location": "features/step_definitions/consulta.rb:23"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 565626500
+            }
+          },
+          {
+            "keyword": "Then ",
+            "name": "an error message should be displayed",
+            "line": 15,
+            "output": [
+              "response code: 400",
+              "COM ESTE CEP: 05001-XYZ INVÁLIDO, A MENSAGEM -> Bad Request É ESPERADA!"
+            ],
+            "match": {
+              "location": "features/step_definitions/consulta.rb:28"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 322700
+            }
+          }
+        ],
+        "after": [
+          {
+            "match": {
+              "location": "features/support/hooks.rb:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4188748300
+            }
+          },
+          {
+            "match": {
+              "location": "features/support/env.rb:56"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 68530800
+            }
+          }
+        ]
+      }
+    ]
+  }
+]
