@@ -14,7 +14,7 @@ _utilizar o verbo GET.
 _ambiente: https://viacep.com.br/ws/01001000/json
 
 [ParaExecutar]
-Navegue até o diretório: "Cucumber" httparty_pokeapi\cucumber
+Navegue até o diretório:  qa_vr\tests
 Execute: bundle exec cucumber
 
 [frameworks]
@@ -54,7 +54,6 @@ Results API
 500 – Erro interno do servidor
 
 
-
 [contato]
-qa.eng.isaiasilva@gmail.com
+qa.eng.isaiasilva@gmail.com / 
 isaiasilva.info@gmail.com
